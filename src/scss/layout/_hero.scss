@@ -1,0 +1,42 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-paragraph {
+    margin-bottom: 32px;
+}
+
+.hero-media {
+    position: relative;
+    height: 200px;
+	margin-top: 40px;
+	margin-bottom: 11vw;
+    background: black;
+    border-radius: 4px 4px 0 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        @include shadow;
+        mix-blend-mode: multiply;
+    }
+}
+
+@include media( '>medium' ) {
+
+    .hero-paragraph {
+        margin-bottom: 40px;
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+
+    .hero-media {
+        margin-top: 64px;
+        height: 400px;
+    }
+}
